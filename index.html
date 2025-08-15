@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nueva Temporada de Béisbol!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>¡Una nueva Temporada de Ligas se acerca!</h1>
+    <p>Atentos, que el proximo viernes 22 iniciaremos una nueva era con nuestro sistema automatizado.</p>
+</header>
+
+<main class="main-content">
+    <section class="call-to-action">
+        <h2>Únete a la liga</h2>
+        <div class="buttons-container">
+            <button class="btn btn-primary" onclick="showDemoMessage()">Iniciar Sesión</button>
+            <button class="btn btn-secondary" onclick="showDemoMessage()">Crear Cuenta</button>
+        </div>
+    </section>
+
+    <section class="phases-section">
+        <h2>Mira las fases del sistema</h2>
+        <div class="phases-container">
+            <div class="phase-card" onclick="showDemoMessage()">
+                <h3>1. Sorteo de Números</h3>
+                <p>El primer paso para el Draft. ¡La suerte está echada!</p>
+            </div>
+            <div class="phase-card" onclick="showDemoMessage()">
+                <h3>2. El Gran Draft</h3>
+                <p>Elige a tus jugadores y refuerzos para formar el mejor equipo.</p>
+            </div>
+            <div class="phase-card" onclick="showDemoMessage()">
+                <h3>3. La Liga Principal</h3>
+                <p>Accede a las tablas de posiciones, estadísticas, reglas e historia de los juegos.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function showDemoMessage() {
+        alert("¡Estamos trabajando en esta sección! Estará lista para el inicio de la temporada.");
+    }
+</script>
+</body>
+</html>
