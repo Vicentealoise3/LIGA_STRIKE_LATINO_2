@@ -97,9 +97,9 @@ body {
     overflow: hidden;
 }
 
-/* Nuevas proporciones para las columnas */
+/* Flexbox corregido para una distribución equitativa */
 .teams-list {
-    flex: 1 1 50%; /* Ocupa el 50% del espacio, pero puede crecer o encogerse */
+    flex: 2; /* Ocupa el doble de espacio que las otras columnas */
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 8px;
@@ -107,17 +107,8 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.results-list {
-    flex: 1 1 25%; /* Ocupa un 25% del espacio base */
-    background-color: #2a2a2a;
-    padding: 20px;
-    border-radius: 8px;
-    overflow-y: auto;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.players-list-container {
-    flex: 1 1 25%; /* Ocupa el 25% restante */
+.results-list, .players-list-container {
+    flex: 1; /* Ocupan un espacio igual */
     background-color: #2a2a2a;
     padding: 20px;
     border-radius: 8px;
@@ -234,11 +225,12 @@ h2, .players-list-container h3 {
     .draft-container {
         flex-direction: column;
         padding: 10px;
+        gap: 15px;
     }
     .teams-list, .results-list, .players-list-container {
         flex: none;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 0; /* Elimina el margen inferior innecesario */
     }
     .teams-grid {
         grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
