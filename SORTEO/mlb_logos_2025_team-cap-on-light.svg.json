@@ -1,0 +1,242 @@
+[
+  {
+    "id": 109,
+    "name": "Arizona Diamondbacks",
+    "abbrev": "AZ",
+    "locationName": "Phoenix",
+    "teamName": "D-backs",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/109.svg"
+  },
+  {
+    "id": 133,
+    "name": "Athletics",
+    "abbrev": "ATH",
+    "locationName": "Sacramento",
+    "teamName": "Athletics",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/133.svg"
+  },
+  {
+    "id": 144,
+    "name": "Atlanta Braves",
+    "abbrev": "ATL",
+    "locationName": "Atlanta",
+    "teamName": "Braves",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/144.svg"
+  },
+  {
+    "id": 110,
+    "name": "Baltimore Orioles",
+    "abbrev": "BAL",
+    "locationName": "Baltimore",
+    "teamName": "Orioles",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/110.svg"
+  },
+  {
+    "id": 111,
+    "name": "Boston Red Sox",
+    "abbrev": "BOS",
+    "locationName": "Boston",
+    "teamName": "Red Sox",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/111.svg"
+  },
+  {
+    "id": 112,
+    "name": "Chicago Cubs",
+    "abbrev": "CHC",
+    "locationName": "Chicago",
+    "teamName": "Cubs",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/112.svg"
+  },
+  {
+    "id": 145,
+    "name": "Chicago White Sox",
+    "abbrev": "CWS",
+    "locationName": "Chicago",
+    "teamName": "White Sox",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/145.svg"
+  },
+  {
+    "id": 113,
+    "name": "Cincinnati Reds",
+    "abbrev": "CIN",
+    "locationName": "Cincinnati",
+    "teamName": "Reds",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/113.svg"
+  },
+  {
+    "id": 114,
+    "name": "Cleveland Guardians",
+    "abbrev": "CLE",
+    "locationName": "Cleveland",
+    "teamName": "Guardians",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/114.svg"
+  },
+  {
+    "id": 115,
+    "name": "Colorado Rockies",
+    "abbrev": "COL",
+    "locationName": "Denver",
+    "teamName": "Rockies",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/115.svg"
+  },
+  {
+    "id": 116,
+    "name": "Detroit Tigers",
+    "abbrev": "DET",
+    "locationName": "Detroit",
+    "teamName": "Tigers",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/116.svg"
+  },
+  {
+    "id": 117,
+    "name": "Houston Astros",
+    "abbrev": "HOU",
+    "locationName": "Houston",
+    "teamName": "Astros",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/117.svg"
+  },
+  {
+    "id": 118,
+    "name": "Kansas City Royals",
+    "abbrev": "KC",
+    "locationName": "Kansas City",
+    "teamName": "Royals",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/118.svg"
+  },
+  {
+    "id": 108,
+    "name": "Los Angeles Angels",
+    "abbrev": "LAA",
+    "locationName": "Anaheim",
+    "teamName": "Angels",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/108.svg"
+  },
+  {
+    "id": 119,
+    "name": "Los Angeles Dodgers",
+    "abbrev": "LAD",
+    "locationName": "Los Angeles",
+    "teamName": "Dodgers",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/119.svg"
+  },
+  {
+    "id": 146,
+    "name": "Miami Marlins",
+    "abbrev": "MIA",
+    "locationName": "Miami",
+    "teamName": "Marlins",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/146.svg"
+  },
+  {
+    "id": 158,
+    "name": "Milwaukee Brewers",
+    "abbrev": "MIL",
+    "locationName": "Milwaukee",
+    "teamName": "Brewers",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/158.svg"
+  },
+  {
+    "id": 142,
+    "name": "Minnesota Twins",
+    "abbrev": "MIN",
+    "locationName": "Minneapolis",
+    "teamName": "Twins",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/142.svg"
+  },
+  {
+    "id": 121,
+    "name": "New York Mets",
+    "abbrev": "NYM",
+    "locationName": "Flushing",
+    "teamName": "Mets",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/121.svg"
+  },
+  {
+    "id": 147,
+    "name": "New York Yankees",
+    "abbrev": "NYY",
+    "locationName": "Bronx",
+    "teamName": "Yankees",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/147.svg"
+  },
+  {
+    "id": 143,
+    "name": "Philadelphia Phillies",
+    "abbrev": "PHI",
+    "locationName": "Philadelphia",
+    "teamName": "Phillies",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/143.svg"
+  },
+  {
+    "id": 134,
+    "name": "Pittsburgh Pirates",
+    "abbrev": "PIT",
+    "locationName": "Pittsburgh",
+    "teamName": "Pirates",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/134.svg"
+  },
+  {
+    "id": 135,
+    "name": "San Diego Padres",
+    "abbrev": "SD",
+    "locationName": "San Diego",
+    "teamName": "Padres",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/135.svg"
+  },
+  {
+    "id": 137,
+    "name": "San Francisco Giants",
+    "abbrev": "SF",
+    "locationName": "San Francisco",
+    "teamName": "Giants",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/137.svg"
+  },
+  {
+    "id": 136,
+    "name": "Seattle Mariners",
+    "abbrev": "SEA",
+    "locationName": "Seattle",
+    "teamName": "Mariners",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/136.svg"
+  },
+  {
+    "id": 138,
+    "name": "St. Louis Cardinals",
+    "abbrev": "STL",
+    "locationName": "St. Louis",
+    "teamName": "Cardinals",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/138.svg"
+  },
+  {
+    "id": 139,
+    "name": "Tampa Bay Rays",
+    "abbrev": "TB",
+    "locationName": "Tampa",
+    "teamName": "Rays",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/139.svg"
+  },
+  {
+    "id": 140,
+    "name": "Texas Rangers",
+    "abbrev": "TEX",
+    "locationName": "Arlington",
+    "teamName": "Rangers",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/140.svg"
+  },
+  {
+    "id": 141,
+    "name": "Toronto Blue Jays",
+    "abbrev": "TOR",
+    "locationName": "Toronto",
+    "teamName": "Blue Jays",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/141.svg"
+  },
+  {
+    "id": 120,
+    "name": "Washington Nationals",
+    "abbrev": "WSH",
+    "locationName": "Washington",
+    "teamName": "Nationals",
+    "logo_url": "https://www.mlbstatic.com/team-logos/team-cap-on-light/120.svg"
+  }
+]

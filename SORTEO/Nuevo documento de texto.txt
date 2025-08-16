@@ -1,0 +1,63 @@
+https://www.mlbstatic.com/team-logos/team-cap-on-light/109.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/133.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/144.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/110.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/111.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/112.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/145.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/113.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/114.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/115.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/116.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/117.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/118.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/108.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/119.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/146.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/158.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/142.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/121.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/147.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/143.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/134.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/135.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/137.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/136.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/138.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/139.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/140.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/141.svg
+https://www.mlbstatic.com/team-logos/team-cap-on-light/120.svg
+
+const teams = [
+    { id: 'ari', name: 'Arizona Diamondbacks', logo: 'https://www.mlb.com/assets/images/team/social/ari.png' },
+    { id: 'atl', name: 'Atlanta Braves', logo: 'https://www.mlb.com/assets/images/team/social/atl.png' },
+    { id: 'bal', name: 'Baltimore Orioles', logo: 'https://www.mlb.com/assets/images/team/social/bal.png' },
+    { id: 'bos', name: 'Boston Red Sox', logo: 'https://www.mlb.com/assets/images/team/social/bos.png' },
+    { id: 'chc', name: 'Chicago Cubs', logo: 'https://www.mlb.com/assets/images/team/social/chc.png' },
+    { id: 'chw', name: 'Chicago White Sox', logo: 'https://www.mlb.com/assets/images/team/social/chw.png' },
+    { id: 'cin', name: 'Cincinnati Reds', logo: 'https://www.mlb.com/assets/images/team/social/cin.png' },
+    { id: 'cle', name: 'Cleveland Guardians', logo: 'https://www.mlb.com/assets/images/team/social/cle.png' },
+    { id: 'col', name: 'Colorado Rockies', logo: 'https://www.mlb.com/assets/images/team/social/col.png' },
+    { id: 'det', name: 'Detroit Tigers', logo: 'https://www.mlb.com/assets/images/team/social/det.png' },
+    { id: 'hou', name: 'Houston Astros', logo: 'https://www.mlb.com/assets/images/team/social/hou.png' },
+    { id: 'kcr', name: 'Kansas City Royals', logo: 'https://www.mlb.com/assets/images/team/social/kcr.png' },
+    { id: 'ana', name: 'Los Angeles Angels', logo: 'https://www.mlb.com/assets/images/team/social/ana.png' },
+    { id: 'lad', name: 'Los Angeles Dodgers', logo: 'https://www.mlb.com/assets/images/team/social/lad.png' },
+    { id: 'mia', name: 'Miami Marlins', logo: 'https://www.mlb.com/assets/images/team/social/mia.png' },
+    { id: 'mil', name: 'Milwaukee Brewers', logo: 'https://www.mlb.com/assets/images/team/social/mil.png' },
+    { id: 'min', name: 'Minnesota Twins', logo: 'https://www.mlb.com/assets/images/team/social/min.png' },
+    { id: 'nym', name: 'New York Mets', logo: 'https://www.mlb.com/assets/images/team/social/nym.png' },
+    { id: 'nyy', name: 'New York Yankees', logo: 'https://www.mlb.com/assets/images/team/social/nyy.png' },
+    { id: 'oak', name: 'Oakland Athletics', logo: 'https://www.mlb.com/assets/images/team/social/oak.png' },
+    { id: 'phi', name: 'Philadelphia Phillies', logo: 'https://www.mlb.com/assets/images/team/social/phi.png' },
+    { id: 'pit', name: 'Pittsburgh Pirates', logo: 'https://www.mlb.com/assets/images/team/social/pit.png' },
+    { id: 'sdp', name: 'San Diego Padres', logo: 'https://www.mlb.com/assets/images/team/social/sdp.png' },
+    { id: 'sfg', name: 'San Francisco Giants', logo: 'https://www.mlb.com/assets/images/team/social/sfg.png' },
+    { id: 'sea', name: 'Seattle Mariners', logo: 'https://www.mlb.com/assets/images/team/social/sea.png' },
+    { id: 'stl', name: 'St. Louis Cardinals', logo: 'https://www.mlb.com/assets/images/team/social/stl.png' },
+    { id: 'tbr', name: 'Tampa Bay Rays', logo: 'https://www.mlb.com/assets/images/team/social/tbr.png' },
+    { id: 'tex', name: 'Texas Rangers', logo: 'https://www.mlb.com/assets/images/team/social/tex.png' },
+    { id: 'tor', name: 'Toronto Blue Jays', logo: 'https://www.mlb.com/assets/images/team/social/tor.png' },
+    { id: 'was', name: 'Washington Nationals', logo: 'https://www.mlb.com/assets/images/team/social/was.png' }
+];

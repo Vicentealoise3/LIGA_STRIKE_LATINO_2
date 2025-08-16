@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft de Equipos en Vivo</title>
+    <link rel="stylesheet" href="draft-styles.css">
+</head>
+<body>
+    
+    <div id="login-screen">
+        <h2>Ingresar al Draft</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+            <p id="login-error" class="error-message"></p>
+        </form>
+    </div>
+
+    <div id="admin-panel" style="display: none;">
+        <h2>Panel de Administrador</h2>
+        <div class="admin-controls">
+            <label for="timer-config">Configurar tiempo por turno (segundos):</label>
+            <input type="number" id="timer-config" min="10" max="300" value="60">
+            <button id="save-timer-btn">Guardar</button>
+        </div>
+        <button id="start-draft-btn">Iniciar Draft</button>
+    </div>
+
+    <div id="draft-content" style="display: none;">
+        <header class="draft-header">
+            <h1>Draft de Equipos en Vivo</h1>
+            <div class="turn-info">
+                <span id="currentPick">Turno: #1</span>
+                <div id="countdown" class="countdown-timer">0:00</div>
+            </div>
+        </header>
+
+        <main class="draft-container">
+            <section class="teams-list">
+                <h2>Equipos Disponibles</h2>
+                <div id="teamsGrid" class="teams-grid">
+                    </div>
+            </section>
+
+            <section class="results-list">
+                <h2>Selecciones del Draft</h2>
+                <ul id="draftSelections" class="selections-list">
+                    </ul>
+                <button id="exportCsvBtn" style="display: none;">Descargar resultados (CSV)</button>
+            </section>
+        </main>
+        
+        <aside class="players-list-container">
+            <h3>Orden del Draft</h3>
+            <ol id="playersList" class="players-list">
+                </ol>
+        </aside>
+    </div>
+    
+    <script src="teams.js"></script>
+    <script src="draft-script.js"></script>
+</body>
+</html>

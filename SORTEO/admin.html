@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Panel de Administración</h1>
+        <p>Configura la nueva temporada de la liga.</p>
+    </header>
+
+    <main class="main-content">
+        <section class="config-section">
+            <h2>Configuración de Participantes</h2>
+            <form id="configForm">
+                <div class="input-group">
+                    <label for="numParticipants">Número de participantes:</label>
+                    <input type="number" id="numParticipants" name="numParticipants" min="1" value="1" required>
+                </div>
+                <div class="input-group">
+                    <label for="delayTime">Tiempo entre resultados (segundos):</label>
+                    <input type="number" id="delayTime" name="delayTime" min="1" value="3" required>
+                </div>
+                
+                <div id="participantsList" class="participants-list">
+                    </div>
+
+                <button type="button" class="btn btn-primary" onclick="generateParticipantInputs()">
+                    Generar campos de participantes
+                </button>
+            </form>
+        </section>
+
+        <section class="draft-section">
+            <h2>Sorteo de Números</h2>
+            <button class="btn btn-secondary" onclick="startDraft()" id="startButton">
+                Iniciar Sorteo
+            </button>
+            <button class="btn btn-export" onclick="exportToExcel()" id="exportButton" style="display: none;">
+                Exportar a Excel
+            </button>
+            
+            <div id="draftStatus" class="status-message"></div>
+
+            <div id="draftResults" class="draft-results-grid">
+                </div>
+        </section>
+    </main>
+
+    <script src="admin-script.js"></script>
+
+</body>
+</html>
