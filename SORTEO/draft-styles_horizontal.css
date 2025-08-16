@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.draft-header {
+    display: none; /* Oculta el encabezado en la vista horizontal para ahorrar espacio */
+}
+
+#login-screen, #admin-panel {
+    background-color: #2a2a2a;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+}
+
+#login-screen h2, #admin-panel h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+#login-form input, .admin-controls input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#login-form button, #admin-panel button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e31837;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-form button:hover, #admin-panel button:hover {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+}
+
+#login-error {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.draft-container {
+    display: flex;
+    flex-direction: row; /* Diseño de 3 columnas para la vista horizontal */
+    flex-grow: 1;
+    padding: 10px;
+    gap: 10px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.teams-list, .results-list, .players-list-container {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.players-list-container {
+    flex: 1; /* Columna de jugadores a la izquierda */
+    min-width: 120px;
+}
+
+.main-content-area {
+    display: flex;
+    flex-direction: column; /* Apila las otras dos secciones en una columna a la derecha */
+    flex: 2;
+    gap: 10px;
+}
+
+h2, .players-list-container h3 {
+    color: #ffffff;
+    border-bottom: 2px solid #e31837;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 5px;
+    justify-items: center;
+}
+
+.team-item {
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 0.2s, opacity 0.2s;
+    text-align: center;
+}
+
+.team-item img {
+    max-width: 30px;
+    max-height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.team-item:hover {
+    transform: scale(1.05);
+}
+
+.team-item.picked {
+    opacity: 0.4;
+    pointer-events: none;
+    position: relative;
+}
+
+.team-item.picked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    border-bottom: 1.5px solid red;
+    transform: translateY(-50%) rotate(-10deg);
+    z-index: 1;
+}
+
+.selections-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selection-item {
+    background-color: #333;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8em;
+}
+
+.selection-item img {
+    width: 20px;
+    height: auto;
+}
+
+.players-list {
+    list-style-type: decimal;
+    padding: 0 10px;
+}
+
+.players-list li {
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+
+.players-list li.current-turn {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+#exportCsvBtn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#exportCsvBtn:hover {
+    background-color: #2980b9;
+}
