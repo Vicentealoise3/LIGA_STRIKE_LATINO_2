@@ -90,10 +90,11 @@ body {
 
 .draft-container {
     display: flex;
-    flex-direction: column; /* Apilado vertical por defecto (para celular) */
-    flex-grow: 1;
+    flex-direction: column;
     padding: 10px;
     gap: 15px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .teams-list, .results-list, .players-list-container {
@@ -114,8 +115,8 @@ h2, .players-list-container h3 {
 
 .teams-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 5px;
     justify-items: center;
 }
 
@@ -127,10 +128,10 @@ h2, .players-list-container h3 {
 }
 
 .team-item img {
-    max-width: 40px;
-    max-height: 30px;
+    max-width: 35px;
+    max-height: 25px;
     display: block;
-    margin: 0 auto 3px auto;
+    margin: 0 auto;
 }
 
 .team-item:hover {
@@ -138,7 +139,7 @@ h2, .players-list-container h3 {
 }
 
 .team-item.picked {
-    opacity: 0.6;
+    opacity: 0.4;
     pointer-events: none;
     position: relative;
 }
@@ -213,41 +214,23 @@ h2, .players-list-container h3 {
 /* Media query para pantallas más grandes (tabletas y escritorios) */
 @media (min-width: 769px) {
     .draft-container {
-        flex-direction: row; /* Cambia a disposición horizontal en pantallas grandes */
+        flex-direction: row;
         padding: 20px;
         gap: 20px;
     }
-    .teams-list, .results-list, .players-list-container {
+    .players-list-container {
         flex: 1;
     }
-    /* Permite que la lista de equipos sea más ancha, si hay espacio */
+    .main-content-area {
+        display: flex;
+        flex-direction: row;
+        flex: 3;
+        gap: 20px;
+    }
     .teams-list {
         flex: 2;
     }
-    h2, .players-list-container h3 {
-        font-size: 1.5em;
-    }
-    .players-list li {
-        font-size: 1.1em;
-    }
-    .selection-item {
-        font-size: 1em;
-    }
-    .team-item img {
-        max-width: 60px;
-        max-height: 45px;
-        margin-bottom: 5px;
-    }
-    .teams-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 10px;
-    }
-    #exportCsvBtn {
-        font-size: 1em;
-        padding: 10px 20px;
-        margin-top: 15px;
-        width: auto;
-        margin-left: 0;
-        margin-right: 0;
+    .results-list {
+        flex: 1;
     }
 }

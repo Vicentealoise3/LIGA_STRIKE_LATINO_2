@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="draft-styles.css">
 </head>
 <body>
-    
+
     <div id="login-screen">
         <h2>Ingresar al Draft</h2>
         <form id="login-form">
@@ -38,27 +38,27 @@
         </header>
 
         <main class="draft-container">
-            <section class="teams-list">
-                <h2>Equipos Disponibles</h2>
-                <div id="teamsGrid" class="teams-grid">
-                    </div>
-            </section>
-
-            <section class="results-list">
-                <h2>Selecciones del Draft</h2>
-                <ul id="draftSelections" class="selections-list">
-                    </ul>
-                <button id="exportCsvBtn" style="display: none;">Descargar resultados (CSV)</button>
-            </section>
+            <aside class="players-list-container">
+                <h3>Orden del Draft</h3>
+                <ol id="playersList" class="players-list">
+                    </ol>
+            </aside>
+            <div class="main-content-area">
+                <section class="teams-list">
+                    <h2>Equipos Disponibles</h2>
+                    <div id="teamsGrid" class="teams-grid">
+                        </div>
+                </section>
+                <section class="results-list">
+                    <h2>Selecciones del Draft</h2>
+                    <ul id="draftSelections" class="selections-list">
+                        </ul>
+                    <button id="exportCsvBtn" style="display: none;">Descargar resultados (CSV)</button>
+                </section>
+            </div>
         </main>
-        
-        <aside class="players-list-container">
-            <h3>Orden del Draft</h3>
-            <ol id="playersList" class="players-list">
-                </ol>
-        </aside>
     </div>
-    
+
     <script src="teams.js"></script>
     <script src="draft-script.js"></script>
 </body>
