@@ -88,9 +88,11 @@ body {
     font-size: 0.9em;
 }
 
+/* Diseño para celular: apilado verticalmente */
 .draft-container {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 10px;
     gap: 15px;
     max-width: 1200px;
@@ -127,9 +129,10 @@ h2, .players-list-container h3 {
     text-align: center;
 }
 
+/* Tamaño de logos corregido */
 .team-item img {
-    max-width: 35px;
-    max-height: 25px;
+    width: 35px;
+    height: 35px;
     display: block;
     margin: 0 auto;
 }
@@ -173,7 +176,7 @@ h2, .players-list-container h3 {
 
 .selection-item img {
     width: 25px;
-    height: auto;
+    height: 25px;
 }
 
 .players-list {
@@ -218,19 +221,48 @@ h2, .players-list-container h3 {
         padding: 20px;
         gap: 20px;
     }
-    .players-list-container {
-        flex: 1;
-    }
     .main-content-area {
         display: flex;
         flex-direction: row;
         flex: 3;
         gap: 20px;
     }
+    .players-list-container {
+        flex: 1;
+    }
     .teams-list {
         flex: 2;
     }
     .results-list {
         flex: 1;
+    }
+
+    h2, .players-list-container h3 {
+        font-size: 1.5em;
+    }
+    .players-list li {
+        font-size: 1.1em;
+    }
+    .selection-item {
+        font-size: 1em;
+    }
+
+    /* Redefinir tamaño de logos para escritorio */
+    .team-item img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 5px;
+    }
+    .teams-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+    #exportCsvBtn {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin-top: 15px;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
