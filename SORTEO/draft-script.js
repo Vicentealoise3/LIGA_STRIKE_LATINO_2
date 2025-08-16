@@ -40,7 +40,7 @@ let draftSelections = [];
 function startDraft() {
     isDraftInProgress = true;
     currentPick = 0;
-    teams.forEach(team => draftedTeams.push(team.id)); // Inicializa todos los equipos como disponibles
+    draftedTeams = [...teams]; // Inicializa todos los equipos como disponibles
     startNextTurn();
     exportCsvBtn.style.display = 'block';
 }
@@ -50,8 +50,7 @@ function startNextTurn() {
         currentPick++;
         const currentPlayer = draftOrder[currentPick - 1];
         currentPickSpan.textContent = `Turno: #${currentPick} - ${currentPlayer}`;
-        
-        // Remarca al jugador actual en la lista
+
         const playersLi = playersList.querySelectorAll('li');
         playersLi.forEach((li, index) => {
             if (index === currentPick - 1) {
@@ -60,8 +59,9 @@ function startNextTurn() {
                 li.classList.remove('current-turn');
             }
         });
-        
+
         startCountdown();
+        renderTeams();
     } else {
         endDraft();
     }
@@ -98,7 +98,6 @@ function handleTeamSelection(event) {
     const team = teams.find(t => t.id === teamId);
     const currentPlayer = draftOrder[currentPick - 1];
 
-    // Verificar si el jugador logueado es el del turno actual
     if (loggedInUser && loggedInUser.role === 'jugador' && loggedInUser.name !== currentPlayer) {
         alert("No es tu turno de seleccionar.");
         return;
@@ -109,41 +108,36 @@ function handleTeamSelection(event) {
             pick: currentPick,
             player: currentPlayer,
             team: team.name,
-            teamLogo: team.logo
         };
         draftSelections.push(selection);
-        
-        teamItem.classList.add('picked');
-        
-        // Eliminar el equipo del array de equipos disponibles
-        draftedTeams = draftedTeams.filter(id => id !== teamId);
-        
+
+        const teamIndex = draftedTeams.findIndex(t => t.id === teamId);
+        if (teamIndex !== -1) {
+            draftedTeams.splice(teamIndex, 1);
+        }
+
         renderDraftSelections();
         startNextTurn();
     }
 }
 
 function handleAutoPick() {
-    const availableTeams = teams.filter(team => draftedTeams.includes(team.id));
-    if (availableTeams.length > 0) {
-        const randomTeam = availableTeams[Math.floor(Math.random() * availableTeams.length)];
+    if (draftedTeams.length > 0) {
+        const randomTeam = draftedTeams[Math.floor(Math.random() * draftedTeams.length)];
         const currentPlayer = draftOrder[currentPick - 1];
-        
+
         const selection = {
             pick: currentPick,
             player: currentPlayer,
             team: randomTeam.name,
-            teamLogo: randomTeam.logo
         };
         draftSelections.push(selection);
-        
-        const teamElement = teamsGrid.querySelector(`.team-item[data-team-id="${randomTeam.id}"]`);
-        if (teamElement) {
-            teamElement.classList.add('picked');
+
+        const teamIndex = draftedTeams.findIndex(t => t.id === randomTeam.id);
+        if (teamIndex !== -1) {
+            draftedTeams.splice(teamIndex, 1);
         }
-        
-        draftedTeams = draftedTeams.filter(id => id !== randomTeam.id);
-        
+
         renderDraftSelections();
         startNextTurn();
     } else {
@@ -154,18 +148,14 @@ function handleAutoPick() {
 function renderTeams() {
     teamsGrid.innerHTML = '';
     teams.forEach(team => {
-        const teamItem = document.createElement('div');
-        teamItem.className = 'team-item';
-        teamItem.dataset.teamId = team.id;
-        
-        // Muestra el nombre del equipo en lugar del logo
-        teamItem.innerHTML = `<span>${team.name}</span>`;
-        
-        if (!draftedTeams.includes(team.id)) {
-            teamItem.classList.add('picked');
+        const isDrafted = draftSelections.some(s => s.team === team.name);
+        if (!isDrafted) {
+            const teamItem = document.createElement('div');
+            teamItem.className = 'team-item';
+            teamItem.dataset.teamId = team.id;
+            teamItem.innerHTML = `<span>${team.name}</span>`;
+            teamsGrid.appendChild(teamItem);
         }
-        
-        teamsGrid.appendChild(teamItem);
     });
 }
 
@@ -174,8 +164,7 @@ function renderDraftSelections() {
     draftSelections.forEach(selection => {
         const li = document.createElement('li');
         li.className = 'selection-item';
-        // También muestra el nombre del equipo en la lista de selecciones
-        li.innerHTML = `<span>${selection.team}</span> - <span>(${selection.player})</span>`;
+        li.textContent = `${selection.team} (${selection.player})`;
         draftSelectionsList.appendChild(li);
     });
 }
@@ -201,11 +190,11 @@ function exportToCsv() {
     const csvHeader = ['Pick', 'Jugador', 'Equipo'];
     const csvRows = draftSelections.map(s => [s.pick, s.player, s.team]);
     const csvContent = [csvHeader.join(',')].concat(csvRows.map(row => row.join(','))).join('\n');
-    
+
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
-    
-    if (navigator.msSaveBlob) { // IE 10+
+
+    if (navigator.msSaveBlob) {
         navigator.msSaveBlob(blob, 'resultados_draft.csv');
     } else {
         link.href = URL.createObjectURL(blob);
@@ -257,6 +246,3 @@ document.getElementById('start-draft-btn').addEventListener('click', () => {
 
 teamsGrid.addEventListener('click', handleTeamSelection);
 exportCsvBtn.addEventListener('click', exportToCsv);
-
-// Inicializar
-renderPlayersList();

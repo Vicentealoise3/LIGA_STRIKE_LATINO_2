@@ -88,11 +88,10 @@ body {
     font-size: 0.9em;
 }
 
-/* Diseño para celular: apilado verticalmente */
+/* Diseño para celular (el predeterminado) */
 .draft-container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     padding: 10px;
     gap: 15px;
     max-width: 1200px;
@@ -196,7 +195,7 @@ h2, .players-list-container h3 {
     background-color: #2980b9;
 }
 
-/* Media query para pantallas más grandes (tabletas y escritorios) */
+/* Diseño para pantallas grandes (escritorio y tabletas grandes) */
 @media (min-width: 769px) {
     .draft-container {
         flex-direction: row;
@@ -228,8 +227,6 @@ h2, .players-list-container h3 {
     .selection-item {
         font-size: 1em;
     }
-
-    /* Redefinir tamaño de las cajas de equipos para escritorio */
     .team-item {
         font-size: 0.9em;
         padding: 8px;
